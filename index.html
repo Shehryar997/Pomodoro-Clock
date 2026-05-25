@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer Clock</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="timer-card">
+
+      <div class="status" id="status">
+        Focus Mode
+      </div>
+
+      <div class="timer" id="timer">
+        25:00
+      </div>
+
+      <div class="controls">
+
+        <div class="input-group">
+          <label>Focus</label>
+          <input type="number" id="focusInput" min="1" value="25">
+        </div>
+
+        <div class="input-group">
+          <label>Break</label>
+          <input type="number" id="breakInput" min="1" value="5">
+        </div>
+
+      </div>
+
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+    </div>
+
+    <div class="history-card">
+
+      <h2>Today's Focus Sessions</h2>
+
+      <ul id="historyList"></ul>
+
+    </div>
+
+  </div>
+
+  <audio id="alarm">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
